@@ -44,3 +44,9 @@ def Login_user(userinfo: UserInfo):
             raise HTTPException(status_code=401, detail="Invalid Password")
     else:
         raise HTTPException(status_code=404, detail="User Not Found")
+
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("backend_new:app", host="0.0.0.0", port=8000, reload=True)
